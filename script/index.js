@@ -20,13 +20,8 @@ function flipbookClick() {
   return;
 }
 
-function webbookClick() {
-  let url = "https://wayside-reader2.comprodls.com/demo/student-edition/interkulturel_1_vtext?page=36";
-  window.open(url, "_blank");
-}
-
-function flipbookClickTE() {
-  let url = "https://wayside-reader1.comprodls.com/demo/teacher-edition/interkulturel_1_te?page=36-37";
+function builderClick() {
+  let url = "https://vhl-builder.comprodls.com/";
   window.open(url, "_blank");
 }
 

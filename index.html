@@ -93,7 +93,7 @@
             </div>
             <button
               class="launchButton"
-              onclick="webbookClick()"
+              onclick="builderClick()"
             >
               Launch
             </button>
@@ -101,10 +101,10 @@
         </div>
       </div>
       <div id="webbookIframe" class="backdrop">
+        <div class="closeIcon" onclick="closeIframe()">
+          <img src="images/closeIcon.svg" />
+        </div>
         <div class="iframeContainer">
-          <div class="closeIcon" onclick="closeIframe()">
-            <img src="images/closeIcon.svg" />
-          </div>
           <iframe frameborder="0"></iframe>
         </div>
       </div>
