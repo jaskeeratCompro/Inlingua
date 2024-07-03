@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- The first thing in any HTML file should be the charset -->
+    <meta charset="utf-8" />
+    <!-- Make site non indexed and non searchable for crawlers -->
+    <meta name="robots" content="index, follow" />
+    <!-- Make the page mobile compatible -->
+    <meta
+      name="viewport"
+      id="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <!-- favicon, title and description -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+    <title>comproDLS Inlingua Pilot</title>
+    <meta
+      name="description"
+      content="comproDLS Reader | Wayside Publishing Demo"
+    />
+    <!-- fonts file -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <!-- style sheet link-->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="headerDiv">
+        <div class="lineLogoBox">
+          <div class="verticalHR"></div>
+          <img class="waysideLogo" src="images/inlinguaLogo.svg" />
+        </div>
+      </div>
+    </header>
+    <hr />
+    <main>
+      <div class="welcomeBox">
+        <h1 class="welcomeTitle">comproDLS<sup>TM</sup> Inlingua Pilot</h1>
+        <p class="welcomeSubtitle">
+          Fully accessible experience on any device with comprehensive tools
+          like notes, highlighting, bookmarks, hotlinking, etc.
+        </p>
+      </div>
+      <div class="grid-container">
+        <div>
+          <div id="div1" class="grid-item selectedDiv" tabindex="0">
+            <div class="containerBox">
+              <h2 class="containerTitle">eReader</h2>
+              <p class="containerContent">
+                Our image-based adaptive rendering optimized for
+                front-of-class delivery. Multi-device support and mobile-ready.
+              </p>
+            </div>
+            <div class="inputsBox">
+              <div class="pageNoInputContainer">
+                <label for="pageNo" class="inputPageNoLabel">Input Page No. </label>
+                <input type="text" name="pageNo" id="pageNo" class="inputPageNo">
+              </div>
+              <div class="switchBtnContainer">
+                <span>Launch in Iframe: </span>
+                <label class="switch">
+                  <input type="checkbox" id="iframeSwitch">
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+            <div class="buttonsBox">
+              <button class="launchButton launchSelectedButton" onclick="flipbookClick()" style="margin-right: 8px;">
+                Launch
+              </button>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex;">
+          <div id="div2" class="grid-item sectionContentBox" tabindex="0">
+            <div class="containerBox">
+              <h2 class="containerTitle">Builder</h2>
+              <p class="containerContent">
+                Our mobile-first responsive design adapts flawlessly across
+                resolutions, ensuring every page retains the true essence of its
+                original design.
+              </p>
+            </div>
+            <button
+              class="launchButton"
+              onclick="webbookClick()"
+            >
+              Launch
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="webbookIframe" class="backdrop">
+        <div class="iframeContainer">
+          <div class="closeIcon" onclick="closeIframe()">
+            <img src="images/closeIcon.svg" />
+          </div>
+          <iframe frameborder="0"></iframe>
+        </div>
+      </div>
+    </main>
+
+    <!-- includes js file -->
+    <script src="script/index.js"></script>
+  </body>
+</html>
