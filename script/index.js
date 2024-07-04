@@ -1,7 +1,7 @@
 var inputField = document.getElementById("username");
 var username = "";
 
-function flipbookClick() {
+function flipbookClick() { debugger
   const inputEle = document.querySelector("#pageNo");
   const pageNo = inputEle.value;
   let url = `https://wayside-reader1.comprodls.com/demo/student-edition/interkulturel_1_vtext?page=${pageNo}`;
@@ -11,8 +11,11 @@ function flipbookClick() {
     const iframeContainer = document.querySelector("#webbookIframe");
     iframeContainer.classList.add("visible");
 
-    const iframe = iframeContainer.querySelector("iframe");
+    const iframeWrapper = document.querySelector("#iframeContainer");
+    const iframe = document.createElement('iframe');
     iframe.src = url;
+
+    iframeWrapper.appendChild(iframe);
   } else {
     window.open(url, "_blank");
   }
@@ -53,4 +56,7 @@ document.getElementById("div2").addEventListener("mousedown", handleDivClick);
 function closeIframe() {
   const iframeContainer = document.querySelector("#webbookIframe");
   iframeContainer.classList.remove("visible");
+
+  const iframeWrapper = document.querySelector("#iframeContainer");
+  iframeWrapper.innerHTML = "";
 }
