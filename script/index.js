@@ -16,7 +16,7 @@ function flipbookClick() {
     //iframe.src = url;
 
     //iframeWrapper.appendChild(iframe);
-    window.open(`../eReader.html?pageNo=${pageNo}`, "_blank");
+    window.open(`eReader.html?pageNo=${pageNo}`, "_blank");
   } else {
     window.open(url, "_blank");
   }
