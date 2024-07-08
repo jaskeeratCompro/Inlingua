@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- The first thing in any HTML file should be the charset -->
+    <meta charset="utf-8" />
+    <!-- Make site non indexed and non searchable for crawlers -->
+    <meta name="robots" content="index, follow" />
+    <!-- Make the page mobile compatible -->
+    <meta
+      name="viewport"
+      id="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <!-- favicon, title and description -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+    <title>comproDLS Inlingua Pilot</title>
+    <meta
+      name="description"
+      content="comproDLS Inlingua Pilot"
+    />
+    <!-- fonts file -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <!-- style sheet link-->
+    <link rel="stylesheet" href="css/eReader.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="headerDiv">
+        Header
+        <!--<div class="lineLogoBox">
+          <div class="verticalHR"></div>
+          <img class="waysideLogo" src="images/inlinguaLogo.svg" />
+        </div>-->
+      </div>
+    </header>
+    <hr />
+    <main>
+      <div class="sidebarContainer">Sidebar</div>
+      <div class="contentWrapper">
+        <div class="iframeContainer" id="eReaderIframe"></div>
+        <footer class="footerContainer">Footer</footer>
+      </div>
+    </main>
+
+
+    <!-- includes js file -->
+    <script src="script/eReader.js"></script>
+  </body>
+</html>

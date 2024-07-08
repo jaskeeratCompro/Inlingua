@@ -67,18 +67,6 @@ header {
   margin-right: 32px;
 }
 
-.headingFontColor {
-  color: var(--jet);
-}
-
-.comproText {
-  font-size: 32px;
-}
-
-.comproText sup {
-  font-size: 18px;
-}
-
 .welcomeTitle sup {
   font-size: 18px;
   vertical-align: text-top;
@@ -153,6 +141,12 @@ main {
   font-weight: 400;
   color: rgb(107, 114, 128);
   margin-top: 12px;
+}
+
+.trialExpiration{
+  margin-top: 24px;
+  text-align: center;
+  color: rgb(107, 114, 128);
 }
 
 section {
@@ -322,7 +316,7 @@ input:checked + .slider:before {
 }
 
 .launchButton {
-  margin: 40px auto 16px;
+  margin: 40px auto 8px;
   width: fit-content;
   background-color: transparent;
   cursor: pointer;
@@ -348,6 +342,20 @@ input:checked + .slider:before {
   text-decoration: none;
   background-color: rgba(17, 24, 39, 0.04);
   box-shadow: none;
+}
+
+.launchButton.disabled, .launchSelectedButton.disabled{
+  cursor: default;
+  pointer-events: none;
+  background-color: rgb(202, 201, 201);
+  border: none;
+  color: white;
+}
+
+.disableLaunchBtnText{
+  font-size: 12px;
+  margin: 0 auto;
+  color: grey;
 }
 
 .rightArrow {

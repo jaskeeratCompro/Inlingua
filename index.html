@@ -16,7 +16,7 @@
     <title>comproDLS Inlingua Pilot</title>
     <meta
       name="description"
-      content="comproDLS Reader | Wayside Publishing Demo"
+      content="comproDLS Inlingua Pilot"
     />
     <!-- fonts file -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -51,6 +51,7 @@
           like notes, highlighting, bookmarks, hotlinking, etc.
         </p>
       </div>
+      <div class="trialExpiration">Trial version expires in 30 days</div>
       <div class="grid-container">
         <div>
           <div id="div1" class="grid-item selectedDiv" tabindex="0">
@@ -90,22 +91,22 @@
               </p>
             </div>
             <button
-              class="launchButton"
+              class="launchButton disabled"
               onclick="builderClick()"
             >
               Launch
             </button>
+            <span class="disableLaunchBtnText">*Not Available in Trial Version*</span>
           </div>
         </div>
       </div>
-      <div id="webbookIframe" class="backdrop">
+      <!--<div id="webbookIframe" class="backdrop">
         <div class="closeIcon" onclick="closeIframe()">
           <img src="images/closeIcon.svg" />
         </div>
         <div id="iframeContainer">
-          <!--<iframe frameborder="0"></iframe>-->
         </div>
-      </div>
+      </div>-->
     </main>
 
     <!-- includes js file -->

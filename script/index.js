@@ -1,21 +1,22 @@
 var inputField = document.getElementById("username");
 var username = "";
 
-function flipbookClick() { debugger
+function flipbookClick() {
   const inputEle = document.querySelector("#pageNo");
   const pageNo = inputEle.value;
   let url = `https://wayside-reader1.comprodls.com/demo/student-edition/interkulturel_1_vtext?page=${pageNo}`;
 
   const switchEle = document.querySelector("#iframeSwitch");
   if (switchEle.checked) {
-    const iframeContainer = document.querySelector("#webbookIframe");
-    iframeContainer.classList.add("visible");
+    //const iframeContainer = document.querySelector("#webbookIframe");
+    //iframeContainer.classList.add("visible");
 
-    const iframeWrapper = document.querySelector("#iframeContainer");
-    const iframe = document.createElement('iframe');
-    iframe.src = url;
+    //const iframeWrapper = document.querySelector("#iframeContainer");
+    //const iframe = document.createElement('iframe');
+    //iframe.src = url;
 
-    iframeWrapper.appendChild(iframe);
+    //iframeWrapper.appendChild(iframe);
+    window.open(`../eReader.html?pageNo=${pageNo}`, "_blank");
   } else {
     window.open(url, "_blank");
   }
