@@ -1,3 +1,15 @@
+document.addEventListener("DOMContentLoaded", function() {
+  const START_DATE = 1719566744;
+  const FREE_TRIAL_DAYS = 30;
+  
+  const currentTime = Date.now();
+  const endTime = (START_DATE + FREE_TRIAL_DAYS * 24 * 60 * 60) * 1000;
+  const remainingDays = Math.max(0, Math.ceil((endTime - currentTime) / (1000 * 60 * 60 * 24)));
+
+  const trialRemainingDaysElement = document.querySelector("#trialRemainingDays");
+  trialRemainingDaysElement.innerText = remainingDays;
+});
+
 var inputField = document.getElementById("username");
 var username = "";
 
