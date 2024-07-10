@@ -115,9 +115,9 @@ header {
 }
 
 /* ======================== content css ======================= */
-main {
+.mainContent {
   padding: 40px 40px;
-  padding-bottom: 0;
+  padding-bottom: 60px;
   max-width: 1200px;
   margin: auto;
 }
@@ -441,6 +441,63 @@ input:checked + .slider:before {
   box-shadow: none;
 }
 
+/* ======================== accordian section css ======================= */
+.accordianSection{
+  background-color: white;
+  padding: 40px 60px;
+}
+
+.accordianTitle{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordianTitle button{
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s;
+}
+
+.accordianTitle button.rotate{
+  transform: rotate(180deg);
+}
+
+.accordianTitle button:hover{
+  background-color: lightgray
+}
+
+.accordianContainer{
+  overflow: hidden;
+  max-height: 1000px;
+  transition: max-height 0.5s ease-out;
+}
+
+.accordianContainer.hide{
+  max-height: 0;
+}
+
+.accordianContent{
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
+
+.accordianContent h2{
+  margin-bottom: 8px;
+}
+
+.accordianContent p{
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+}
 /* ======================== media query css ======================= */
 @media (max-width: 960px) {
   .grid-container {

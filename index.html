@@ -44,69 +44,91 @@
     </header>
     <hr />
     <main>
-      <div class="welcomeBox">
-        <h1 class="welcomeTitle">comproDLS<sup>TM</sup> Inlingua Pilot</h1>
-        <p class="welcomeSubtitle">
-          Fully accessible experience with comprehensive tools
-          like notes, highlighting, bookmarks, hotlinking, etc.
-        </p>
-      </div>
-      <div class="trialExpiration">Trial version expires in <span id="trialRemainingDays">30</span> days</div>
-      <div class="grid-container">
-        <div>
-          <div id="div1" class="grid-item selectedDiv" tabindex="0">
-            <div class="containerBox">
-              <h2 class="containerTitle">eReader</h2>
-              <p class="containerContent">
-                Our image-based adaptive rendering optimized for
-                front-of-class delivery. Multi-device support and mobile-ready.
-              </p>
-            </div>
-            <div class="inputsBox">
-              <div class="pageNoInputContainer">
-                <label for="pageNo" class="inputPageNoLabel">Page No. </label>
-                <input type="text" name="pageNo" id="pageNo" class="inputPageNo">
+      <div class="mainContent">
+        <div class="welcomeBox">
+          <h1 class="welcomeTitle">comproDLS<sup>TM</sup> Inlingua Pilot</h1>
+          <p class="welcomeSubtitle">
+            Fully accessible experience with comprehensive tools
+            like notes, highlighting, bookmarks, hotlinking, etc.
+          </p>
+        </div>
+        <div class="trialExpiration">Trial version expires in <span id="trialRemainingDays">30</span> days</div>
+        <div class="grid-container">
+          <div>
+            <div id="div1" class="grid-item selectedDiv" tabindex="0">
+              <div class="containerBox">
+                <h2 class="containerTitle">eReader</h2>
+                <p class="containerContent">
+                  Our image-based adaptive rendering optimized for
+                  front-of-class delivery. Multi-device support and mobile-ready.
+                </p>
               </div>
-              <div class="switchBtnContainer">
-                <span>Launch in Iframe: </span>
-                <label class="switch">
-                  <input type="checkbox" id="iframeSwitch">
-                  <span class="slider round"></span>
-                </label>
+              <div class="inputsBox">
+                <div class="pageNoInputContainer">
+                  <label for="pageNo" class="inputPageNoLabel">Page No. </label>
+                  <input type="text" name="pageNo" id="pageNo" class="inputPageNo">
+                </div>
+                <div class="switchBtnContainer">
+                  <span>Launch in Iframe: </span>
+                  <label class="switch">
+                    <input type="checkbox" id="iframeSwitch">
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="buttonsBox">
+                <button class="launchButton launchSelectedButton" onclick="flipbookClick()" style="margin-right: 8px;">
+                  Launch
+                </button>
               </div>
             </div>
-            <div class="buttonsBox">
-              <button class="launchButton launchSelectedButton" onclick="flipbookClick()" style="margin-right: 8px;">
+          </div>
+          <div style="display: flex;">
+            <div id="div2" class="grid-item sectionContentBox" tabindex="0">
+              <div class="containerBox">
+                <h2 class="containerTitle">Builder</h2>
+                <p class="containerContent">
+                  Streamline educational content creation and delivery with Builder, enabling seamless integration of text, videos, images, and more, while minimizing reliance on tech teams.
+                </p>
+              </div>
+              <button
+                class="launchButton disabled"
+                onclick="builderClick()"
+              >
                 Launch
               </button>
+              <span class="disableLaunchBtnText">*Not Available in Trial Version*</span>
             </div>
           </div>
         </div>
-        <div style="display: flex;">
-          <div id="div2" class="grid-item sectionContentBox" tabindex="0">
-            <div class="containerBox">
-              <h2 class="containerTitle">Builder</h2>
-              <p class="containerContent">
-                Streamline educational content creation and delivery with Builder, enabling seamless integration of text, videos, images, and more, while minimizing reliance on tech teams.
-              </p>
-            </div>
-            <button
-              class="launchButton disabled"
-              onclick="builderClick()"
-            >
-              Launch
-            </button>
-            <span class="disableLaunchBtnText">*Not Available in Trial Version*</span>
+        <!--<div id="webbookIframe" class="backdrop">
+          <div class="closeIcon" onclick="closeIframe()">
+            <img src="images/closeIcon.svg" />
+          </div>
+          <div id="iframeContainer">
+          </div>
+        </div>-->
+      </div>
+      <div class="accordianSection">
+        <div class="accordianTitle">
+          <h1>Additional Content - 1</h1>
+          <button onclick="toggleAccordian(event)" class="rotate" aria-expanded="true">
+            <img src="images/downArrowIcon.svg" />
+          </button>
+        </div>
+        <div class="accordianContainer">
+          <div class="accordianContent">
+            <h2>What is Lorem Ipsum?</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+          </div>
+          <div class="accordianContent">
+            <h2>Why do we use it?</h2>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+            </p>
           </div>
         </div>
       </div>
-      <!--<div id="webbookIframe" class="backdrop">
-        <div class="closeIcon" onclick="closeIframe()">
-          <img src="images/closeIcon.svg" />
-        </div>
-        <div id="iframeContainer">
-        </div>
-      </div>-->
     </main>
 
     <!-- includes js file -->
