@@ -6,6 +6,9 @@ window.onload = function(){ debugger
   if(pageNo){
     url.searchParams.append('page', pageNo);
   }
+  else{
+    url.searchParams.append('page', '36');
+  }
   url= url.toString();
   const iframe = document.createElement('iframe');
   iframe.src = url;

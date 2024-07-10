@@ -442,15 +442,19 @@ input:checked + .slider:before {
 }
 
 /* ======================== accordian section css ======================= */
-.accordianSection{
-  background-color: white;
+.accordianSection > div{
   padding: 40px 60px;
+}
+
+.accordianSection > div:first-child{
+  background-color: white;
 }
 
 .accordianTitle{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .accordianTitle button{
@@ -466,7 +470,7 @@ input:checked + .slider:before {
   transition: transform 0.5s;
 }
 
-.accordianTitle button.rotate{
+.accordianTitle.rotate button{
   transform: rotate(180deg);
 }
 

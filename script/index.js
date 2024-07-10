@@ -80,18 +80,18 @@ function closeIframe() {
 }
 
 function toggleAccordian(event) {
-  const button = event.currentTarget;
-  const isOpen = button.getAttribute("aria-expanded") === "true";
-  const accordianContainer = document.querySelector(".accordianSection .accordianContainer");
+  const accordian = event.currentTarget;
+  const isOpen = accordian.getAttribute("aria-expanded") === "true";
+  const accordianContainer = accordian.nextElementSibling;
   if (isOpen) {
     accordianContainer.classList.add("hide");
-    button.classList.remove("rotate");
-    button.setAttribute("aria-expanded", "false");
+    accordian.classList.remove("rotate");
+    accordian.setAttribute("aria-expanded", "false");
     accordianContainer.scrollIntoView(false);
   } else {
     accordianContainer.classList.remove("hide");
-    button.classList.add("rotate");
-    button.setAttribute("aria-expanded", "true");
+    accordian.classList.add("rotate");
+    accordian.setAttribute("aria-expanded", "true");
     accordianContainer.scrollIntoView(true);
   }
 }
