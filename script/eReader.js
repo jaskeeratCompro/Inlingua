@@ -1,15 +1,7 @@
 window.onload = function(){ debugger
   const urlParams = new URLSearchParams(window.location.search);
   const pageNo = urlParams.get('page');
-  const baseUrl = `https://inlreader-dev.comprodls.com/demo/student-edition/interkulturel_1_vtext`;
-  let url = new URL(baseUrl);
-  if(pageNo){
-    url.searchParams.append('page', pageNo);
-  }
-  else{
-    url.searchParams.append('page', '36');
-  }
-  url= url.toString();
+  const url = `https://inlreader-dev.comprodls.com/demo/student-edition/interkulturel_1_vtext?page=${pageNo}`;
   const iframe = document.createElement('iframe');
   iframe.src = url;
 

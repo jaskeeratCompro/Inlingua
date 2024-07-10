@@ -15,7 +15,7 @@ var username = "";
 
 function flipbookClick() {
   const inputEle = document.querySelector("#pageNo");
-  const pageNo = inputEle.value;
+  const pageNo = inputEle.value || '36';
   const switchEle = document.querySelector("#iframeSwitch");
   if (switchEle.checked) {
     //const iframeContainer = document.querySelector("#webbookIframe");
@@ -29,12 +29,7 @@ function flipbookClick() {
     let url = pageNo ? `eReader.html?page=${pageNo}` : `eReader.html`;
     window.open(url, "_blank");
   } else {
-    const baseUrl = `https://inlreader-dev.comprodls.com/demo/student-edition/interkulturel_1_vtext`;
-    let readerUrl = new URL(baseUrl);
-    if (pageNo) {
-      readerUrl.searchParams.append("page", pageNo);
-    }
-    readerUrl = readerUrl.toString();
+    const readerUrl = `https://inlreader-dev.comprodls.com/demo/student-edition/interkulturel_1_vtext?page=${pageNo}`;
     window.open(readerUrl, "_blank");
   }
 
