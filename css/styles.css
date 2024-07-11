@@ -450,6 +450,10 @@ input:checked + .slider:before {
   background-color: white;
 }
 
+#accordian1 > div, #accordian2 > div{
+  max-width: 1024px;
+  margin: auto;
+}
 .accordianTitle{
   display: flex;
   align-items: center;
