@@ -1,7 +1,7 @@
 window.onload = function () {
   const urlParams = new URLSearchParams(window.location.search);
   const pageNo = urlParams.get("page");
-  const url = `https://inlreader-dev.comprodls.com/demo/student-edition/interkulturel_1_vtext?page=${pageNo}`;
+  const url = `https://inlreader-dev.comprodls.com/demo/student-edition/interkulturel_1_vtext?page=${pageNo}&embed`;
   const iframe = document.createElement("iframe");
   iframe.src = url;
   iframe.allowFullscreen = true;
@@ -9,20 +9,29 @@ window.onload = function () {
   const iframeContainer = document.querySelector("#eReaderIframe");
   iframeContainer.appendChild(iframe);
 
-  const sidebarContainer = document.querySelector(".sidebarContainer");
-  const sidebarDimensionContainer = document.querySelector(".sidebarDimensions");
-  const iframeDimensionContainer = document.querySelector(".iframeDimensions");
-
-  sidebarDimensionContainer.innerText = `Sidebar Dimensions: ${sidebarContainer.offsetWidth} x ${sidebarContainer.offsetHeight}`;
-  iframeDimensionContainer.innerText = `Iframe Dimensions: ${iframeContainer.offsetWidth} x ${iframeContainer.offsetHeight}`;
+  toggleSidebar();
+  getDimensions();
 };
 
 window.onresize = function () {
-  const iframeContainer = document.querySelector("#eReaderIframe");
-  const sidebarContainer = document.querySelector(".sidebarContainer");
-  const sidebarDimensionContainer = document.querySelector(".sidebarDimensions");
-  const iframeDimensionContainer = document.querySelector(".iframeDimensions");
-
-  sidebarDimensionContainer.innerText = `Sidebar Dimensions: ${sidebarContainer.offsetWidth} x ${sidebarContainer.offsetHeight}`;
-  iframeDimensionContainer.innerText = `Iframe Dimensions: ${iframeContainer.offsetWidth} x ${iframeContainer.offsetHeight}`;
+  toggleSidebar();
+  getDimensions();
 };
+
+function toggleSidebar(){
+  const sidebar = document.querySelector(".sidebarContainer");
+  if(screen.width < 1024){
+    sidebar.classList.add('hidden');
+  }
+  else{
+    sidebar.classList.remove('hidden');
+  }
+}
+
+function getDimensions(){
+  const header = document.querySelector("header");
+  const sidebar = document.querySelector(".sidebarContainer");
+
+  document.querySelector(".headerDimension").innerText = `(height: ${header.offsetHeight}px)`;
+  document.querySelector(".sidebarDimension").innerText = `(width: ${sidebar.offsetWidth}px)`;
+}

@@ -57,19 +57,13 @@ html::-webkit-scrollbar-thumb {
 
 /* ======================== header css ======================= */
 header {
-  padding: 8px;
-  background: rgb(241, 245, 249);
-}
-
-.headerDiv {
+  height: 72px;
+  background: #f1efee;
+  color: #292524 ;
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-left: 32px;
-  margin-right: 32px;
-  padding: 8px 0;
+  align-items: center;
 }
-
 
 .lineLogoBox {
   display: flex;
@@ -94,17 +88,17 @@ main {
 
 /* ======================== sidebar css ======================= */
 .sidebarContainer {
-  background: rgb(241, 245, 249);
+  background: #f1efee;
+  color: #292524 ;
   border-right: 1px solid black;
-  width: 250px;
+  width: 285px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 
-.dimensions > div {
-  margin-top: 8px;
+.sidebarContainer.hidden{
+  display: none;
 }
 
 /* ======================== content css ======================= */
@@ -126,8 +120,9 @@ iframe{
 }
 
 /* ======================== footer css ======================= */
-.footerContainer {
-  background: rgb(241, 245, 249);
+footer {
+  background: #f1efee;
+  color: #292524 ;
   height: 56px;
   display: flex;
   align-items: center;
