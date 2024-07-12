@@ -156,6 +156,7 @@ header {
 .welcomeSubtitle span{
   font-size: 24px;
   color: #666666;
+  margin-bottom: 4px;
 }
 
 #trialStartDate {
