@@ -8,6 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const trialRemainingDaysElement = document.querySelector("#trialRemainingDays");
   trialRemainingDaysElement.innerText = remainingDays;
+
+  const startDate = new Date(START_DATE * 1000);
+  const options = {year: 'numeric', month: 'short', day: 'numeric'};
+
+  const formattedStartDate = startDate.toLocaleDateString('en-US', options);
+
+  document.querySelector('#trialStartDate').innerText = formattedStartDate;
 });
 
 var inputField = document.getElementById("username");
@@ -82,11 +89,11 @@ function toggleAccordian(event) {
     accordianContainer.classList.add("hide");
     accordian.classList.remove("rotate");
     accordian.setAttribute("aria-expanded", "false");
-    accordianContainer.scrollIntoView(false);
+    //accordianContainer.scrollIntoView(false);
   } else {
     accordianContainer.classList.remove("hide");
     accordian.classList.add("rotate");
     accordian.setAttribute("aria-expanded", "true");
-    accordianContainer.scrollIntoView(true);
+    //accordianContainer.scrollIntoView(true);
   }
 }
